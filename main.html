@@ -2,31 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
+
+    <title>Contact Us Page</title>
+
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <!-- <header>Contact Us</header> -->
-    <main>
-      <form action="/action_page.php" autocomplete="on">
-        <fieldset>
-          <legend>Contact Us</legend>
-          <label for="fname">First name:</label><br />
-          <input type="text" id="fname" name="fname" /><br />
-          <label for="lname">Last name:</label><br />
-          <input type="text" id="lname" name="lname" /><br />
-          <label for="username">Username:</label><br>
-          <input type="text" id="username" name="username"><br>
-          <label for="pwd">Password:</label><br>
-          <input type="password" id="pwd" name="pwd"> <br/>
-          <label for="message">Message:</label><br />
-          <textarea name="message"></textarea>
-          <br /><br />
-
-          <input type="submit" value="Submit" />
-        </fieldset>
-      </form>
-    </main>
+    <div class="container">
+      <header><h1>Contact Us</h1></header>
+      <main>
+        <form action="inputData">
+          <section class="each-field">
+            <label for="fname">First Name:</label><br />
+            <div class="float">
+              <input type="text" id="fname" name="fname" />
+              <p class="firstName">Please enter a valid first name</p>
+            </div>
+          </section>
+          <section class="each-field">
+            <label for="lname">Last Name:</label><br />
+            <div class="float">
+              <input type="text" id="lname" name="lname" />
+              <p class="lastName">Please enter a valid last name</p>
+            </div>
+          </section>
+          <section class="each-field">
+            <label for="email">Email:</label><br />
+            <div class="float">
+              <input type="text" id="email" name="email" />
+              <p class="email">Please enter a valid email ID</p>
+            </div>
+          </section>
+          <section class="each-field">
+            <label for="password">Password:</label><br />
+            <div class="float">
+              <input type="password" id="password" name="password" />
+              <p class="password">
+                Password should be of atleast 8 charactes including one
+                uppercase alphabet, at least one symbol and one number
+              </p>
+            </div>
+          </section>
+          <section class="each-field">
+            <label for="message">Message</label><br />
+            <div class="float">
+              <input type="text" id="message" name="message" />
+              <p class="message">Message</p>
+            </div>
+          </section>
+          <section class="center">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox">I agree to the terms & conditions</label>
+          </section>
+          <section class="button-area">
+            <input type="submit" value="Sign Up" class="button" />
+            <input type="reset" value="Cancel" class="button" />
+          </section>
+        </form>
+      </main>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
